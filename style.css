@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:wght@200;400;600&display=swap');
+/*
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+*/
+
+html {
+    font-size: 15px;
+}
+
+:root {
+        /* Primary */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+        /* Neutral */
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--VeryLightGray);
+    display: grid;
+    place-items: center;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-size: 15px;
+    padding: 8%;
+}
+
+        /* Top Head */
+.top_head {
+    text-align: center;
+    max-width: 500px;
+}
+
+.top_head h1 {
+    font-size: 1.6rem;
+}
+
+.top_head h1:nth-child(1) {
+    font-weight: 200;
+    color: var(--GrayishBlue);
+}   
+
+.top_head h1:nth-child(2) {
+    font-weight: 600;
+    color: var(--VeryDarkBlue);
+}   
+
+.top_head p {
+    color: var(--GrayishBlue);
+    margin: 20px 0 100px;
+}
+
+        /* Cards Section */
+.cards_section {
+    display: grid;
+    row-gap: 30px;
+}
+
+.card {
+    background-color: #fff;
+    max-width: 375px;
+    position: relative;
+    overflow: hidden;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 0px hsl(230.95deg 34.81% 40.89% / 12%);
+}
+
+.card h3 {
+    color: var(--VeryDarkBlue);
+}
+
+.card p {
+    color: var(--GrayishBlue);
+    margin-top: 10px;
+}
+
+.card img {
+    float: right;
+    margin-top: 30px;
+}
+
+.cards_section .double_row {
+    display: grid;
+    row-gap: 30px;
+}
+
+.card_c {
+    border-top: 5px solid var(--Cyan);
+}
+.card_r {
+    border-top: 5px solid var(--Red);
+}
+.card_y {
+    border-top: 5px solid var(--Orange);
+}
+.card_b {
+    border-top: 5px solid var(--Blue);
+}
+
+        /* Media Querries */
+
+@media only screen and (min-width:769px) {
+    .cards_section {
+        display: grid;
+        row-gap: 30px;
+        grid-template-columns: auto auto auto;
+        align-items: center;
+        column-gap: 30px;
+    }
+
+    .top_head h1 {
+        font-size: 2.4rem;
+    }
+}
